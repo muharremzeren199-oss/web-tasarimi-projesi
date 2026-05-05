@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- 2. MOBİLDE SAĞDA, MASAÜSTÜNDE SOLDA: Logo -->
             <a class="navbar-brand ms-auto ms-lg-0" href="index.html">Zeren Web</a>
 
-            <!-- 3. MASAÜSTÜNDE SAĞDA: Menü Linkleri (Login Hariç Tam Liste) -->
+            <!-- 3. MASAÜSTÜNDE SAĞDA: Menü Linkleri  -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-start mt-2 mt-lg-0">
                     <li class="nav-item">
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="nav-link" href="iletisim.html">İletişim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="login.php">Giriş</a>
+                        <a class="nav-link text-warning" href="giris.php">Giriş</a>
                     </li>
                 </ul>
             </div>
@@ -103,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                             <?php endif; ?>
 
-                            <!-- Form POST metoduyla kendi kendine (login.php) veri yollar -->
-                            <form id="loginForm" action="login.php" method="POST">
+                            <!-- Form POST metoduyla kendi kendine veri yollar -->
+                            <form id="GirisForm" action="giris.php" method="POST">
                                 <div class="mb-3">
                                     <label class="form-label fw-bold text-secondary">E-Posta Adresi</label>
                                     <input type="text" id="email" name="email" class="form-control" placeholder="Örn: b2412100001@sakarya.edu.tr">
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- JAVASCRIPT DENETİMLERİ -->
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.getElementById('GirisForm').addEventListener('submit', function(event) {
             // Kutucuklardaki yazıları alıyoruz
             const email = document.getElementById('email').value.trim();
             const sifre = document.getElementById('sifre').value.trim();

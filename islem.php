@@ -23,7 +23,7 @@
             <!-- 2. MOBİLDE SAĞDA, MASAÜSTÜNDE SOLDA: Logo -->
             <a class="navbar-brand ms-auto ms-lg-0" href="index.html">Zeren Web</a>
 
-            <!-- 3. MASAÜSTÜNDE SAĞDA: Menü Linkleri (Login Hariç Tam Liste) -->
+            <!-- 3. MASAÜSTÜNDE SAĞDA: Menü Linkleri  -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-start mt-2 mt-lg-0">
                     <li class="nav-item">
@@ -42,7 +42,7 @@
                         <a class="nav-link" href="iletisim.html">İletişim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="login.php">Giriş</a>
+                        <a class="nav-link text-warning" href="giris.php">Giriş</a>
                     </li>
                 </ul>
             </div>

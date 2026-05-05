@@ -17,17 +17,16 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid px-4">
 
-            <!-- Hamburger Menü Butonu (Mobilde 1. Sırada) -->
+            <!-- Hamburger Menü Butonu -->
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Zeren Web Logosu (Mobilde 2. Sırada ve Sağda, Masaüstünde 1. Sırada ve Solda) -->
+            <!-- Zeren Web Logosu -->
             <a class="navbar-brand order-2 order-lg-1 ms-auto ms-lg-0" href="index.html">Zeren Web</a>
 
-            <!-- Menü İçeriği (Her Zaman 3. Sırada) -->
+            <!-- Menü İçeriği -->
             <div class="collapse navbar-collapse order-3" id="navbarNav">
-                <!-- ms-auto masaüstünde sağa yaslar, text-start mobilde yazıları sola yaslar -->
                 <ul class="navbar-nav ms-auto text-start mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Hakkında</a>
@@ -45,56 +44,66 @@
                         <a class="nav-link" href="iletisim.html">İletişim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="login.php">Giriş</a>
+                        <a class="nav-link text-warning" href="giris.php">Giriş</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Ana İçerik Kapsayıcısı -->
     <div class="container mt-5">
-        <h2 class="text-center mb-4 text-danger">Tarihin Başladığı Yer: Muş'a Hoş Geldiniz</h2>
+        <h2 class="text-center mb-5 text-danger">Tarihin Başladığı Yer: Muş'a Hoş Geldiniz</h2>
 
-        <!-- 5 Resimli Tıklanabilir Slider (Carousel)  -->
-        <div id="sehirSlider" class="carousel slide mb-5 shadow-lg rounded" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="4"></button>
+        <!-- Slider Bölümü  -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+
+                <!-- 5 Resimli Tıklanabilir Slider   -->
+                <div id="sehirSlider" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="Resimler/TarihiMuratKoprusu.jpg" class="d-block w-100"
+                                style="height: 500px !important; object-fit: cover !important;" alt="Tarihi Murat Köprüsü">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Resimler/MalazgirtKalesi.jpg" class="d-block w-100"
+                                style="height: 500px !important; object-fit: cover !important;" alt="Malazgirt Kalesi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Resimler/MusSpor.jpg" class="d-block w-100"
+                                style="height: 500px !important; object-fit: cover !important;" alt="Muşspor Takımı">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Resimler/MusOvasiveLalesi.jpg" class="d-block w-100"
+                                style="height: 500px !important; object-fit: cover !important;" alt="Muş Ovası ve Lalesi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Resimler/MusKalesi.jpg" class="d-block w-100"
+                                style="height: 500px !important; object-fit: cover !important;" alt="Muş Kalesi">
+                        </div>
+                    </div>
+
+                    <!-- Slider Sağ/Sol Tıklama Butonları -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                </div>
+
             </div>
-            <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                    <img src="Resimler/TarihiMuratKoprusu.jpg" class="d-block w-100"
-                        style="height: 500px; object-fit: cover;" alt="Tarihi Murat Köprüsü">
-                </div>
-                <div class="carousel-item">
-                    <img src="Resimler/MalazgirtKalesi.jpg" class="d-block w-100"
-                        style="height: 500px; object-fit: cover;" alt="Malazgirt Kalesi">
-                </div>
-                <div class="carousel-item">
-                    <img src="Resimler/MusSpor.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;"
-                        alt="Muşspor Takımı">
-                </div>
-                <div class="carousel-item">
-                    <img src="Resimler/MusOvasiveLalesi.jpg" class="d-block w-100"
-                        style="height: 500px; object-fit: cover;" alt="Muş Ovası ve Lalesi">
-                </div>
-                <div class="carousel-item">
-                    <img src="Resimler/MusKalesi.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;"
-                        alt="Muş Kalesi">
-                </div>
-            </div>
-            <!-- Slider Sağ/Sol Tıklama Butonları -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Önceki</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Sonraki</span>
-            </button>
         </div>
 
         <!-- Şehir Bilgileri ve Mirasımız Bölümü -->
@@ -136,7 +145,7 @@
 
     </div>
 
-    <!-- Bootstrap JS (Slider'ın kayması için zorunlu) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
