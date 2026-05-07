@@ -64,7 +64,7 @@
                 <div class="card border-0 shadow-sm p-4">
                     <p class="lead text-center">
                         Zihinsel gelişimim için kodlama ve yapay zeka projeleriyle uğraşırken, fiziksel sağlığım için de
-                        fitness sporuyla ilgilenirken aynı zamanda düzenli yüzmeye gidiyorum. Boş zamanlarımda ise biyografi filmleri izlemeyi  veya dini kitapları okumayı çok severim. Özellikle tarihe ve gerçek hayat hikayelerine dayanan yapımlara büyük bir ilgim var. Dinlenmek içinse genellikle başyapıt dizileri izlemeyi tercih ederim.
+                        fitness sporuyla ilgilenirken aynı zamanda düzenli yüzmeye gidiyorum. Boş zamanlarımda ise biyografi filmleri izlemeyi  veya dini kitapları okumayı çok severim. Özellikle tarihe ve gerçek hayat hikayelerine dayanan yapımlara büyük bir ilgim var. Uyumadan önce ise genellikle başyapıt dizileri izlemeyi tercih ederim.
                     </p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-md-6 mb-3">
                 <div class="card border-0 shadow-sm">
-                    
+
                     <img src="Resimler/fitness.jpg" class="card-img-top rounded" style="height: 250px; object-fit: cover;" alt="Fitness ve Ağırlık Antrenmanı">
                     <div class="card-body text-center">
                         <h5 class="card-title text-danger">Fitness Disiplini</h5>
@@ -95,7 +95,7 @@
         <hr class="mb-5">
 
         <!-- API BAŞLANGIÇ NOKTASI -->
-        <h3 class="mb-3 text-secondary">Sherlock Holmes Evreni (TVMaze API)</h3>
+        <h3 class="mb-3 text-secondary">Dizi Evreni (TVMaze API)</h3>
         <p class="text-muted mb-4">Aşağıdaki veriler JavaScript <code>fetch()</code> metodu kullanılarak TVMaze
             veritabanından canlı olarak çekilmektedir.</p>
 
@@ -114,19 +114,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- API ENTEGRASYONU (JavaScript) -->
-
-    <script>
-        // Çekmek istediğimiz yapımların isimlerini bir listeye koyduk
-        const favoriDiziler = ['Gassal', 'La Casa de Papel', 'Prison Break', 'Peaky Blinders'];
+   <script>
+        // Sadece diziler ve belgeseller listemiz
+        const favoriDiziler = ['Gassal', 'La Casa de Papel', 'Prison Break', 'Peaky Blinders', 'Oppenheimer'];
         const sonucKutusu = document.getElementById('api-sonuclari');
         sonucKutusu.innerHTML = ''; // Ekranda dönen Yükleniyor... yazısını temizle
 
-        // Listemizdeki her bir dizi için API'ye aynı anda, ayrı ayrı istek atıyoruz (Promise.all kullanılarak)
+        // Listemizdeki her bir dizi için API'ye aynı anda, ayrı ayrı istek atıyoruz
         Promise.all(favoriDiziler.map(diziAdi =>
             fetch(`https://api.tvmaze.com/search/shows?q=${diziAdi}`)
                 .then(cevap => cevap.json())
                 .then(veriler => {
-                    // Eğer yapım bulunduysa ilk çıkanı al, bulunamadıysa boş dön (null)
+                    // Eğer yapım bulunduysa ilk çıkanı al, bulunamadıysa boş dön
                     if (veriler.length > 0) {
                         return veriler[0].show;
                     }
@@ -167,6 +166,7 @@
                 console.error("API Hatası:", hata);
             });
     </script>
+
 </body>
 
 </html>
