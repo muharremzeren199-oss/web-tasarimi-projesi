@@ -1,0 +1,97 @@
+/* index.html için stil dosyası */
+
+.tech-stack-container {
+    width: 100%;
+    max-width: 100%; /* Eski dar sınırları tamamen ezer ve tam genişlik verir */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-sizing: border-box; /* İç boşlukların sayfayı taşırmasını engeller */
+}
+
+/* Sol Sütun (Barlar) */
+.stack-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.skill-box {
+    margin-bottom: 22px;
+    display: flex; /* Flexbox ile daha düzenli yaptım */
+    flex-direction: column;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #444;
+    font-size: 16px;
+}
+
+.skill-percent {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px; /* Biraz daha ince yaptım  */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d); /* Renk geçişi */
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Sağ Sütun (Görsel) */
+.motivasyon-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #f0f0f0; /* Barlardan ayıran ince bir çizgi */
+    padding-left: 20px;
+}
+
+.motivasyon-text {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tirmanan-gorsel {
+    max-height: 220px; /* Görselin sayfayı şişirmesini engeller */
+    margin-bottom: 15px;
+}
+
+.ai-goal-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b21f1f; /* Kırmızı renk */
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.ai-goal-text {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+}
