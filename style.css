@@ -1,4 +1,6 @@
-/* index.html için stil dosyası */
+/* ======================================================= */
+/* İNDEX HTML İÇİN ÖZEL AYARLAR  */
+/* ======================================================= */
 
 .tech-stack-container {
     width: 100%;
@@ -95,3 +97,67 @@
     font-weight: bold;
     color: #2c3e50;
 }
+
+/* ======================================================= */
+/* GİRİŞ SAYFASI ÖZEL AYARLARI  */
+/* ======================================================= */
+.login-page-body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Giriş sayfasının arka planı için tam ekran resim */
+.login-bg {
+
+    background-image: url('Resimler/giris.jpg');
+    background-size: 100% 100%; /* Resmi köşelerden çekip tam sığdırır */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Buzlu Cam */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 15px !important;
+}
+
+/* Form Etiketlerini ve Yazıları Belirginleştir */
+.glass-card .form-label {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+/* ======================================================= */
+/* DİĞER SAYFALAR İÇİN GENEL ARKA PLAN VE KART GÖRÜNÜMÜ    */
+/* ======================================================= */
+
+body:not(.login-page-body) {
+
+    background-image: url('Resimler/arkaplan.jpg');
+    background-size: cover; /* Resmi sündürmeden ekrana tam sığdırır */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Yazıların okunması için tüm içerik kutularına şık bir kağıt/kart görünümü veriyorum */
+body:not(.login-page-body) .container {
+    background-color: rgba(255, 255, 255, 0.95); /* Yarı saydam beyaz arka plan */
+    border-radius: 15px; /* Köşeleri yumuşatır */
+    padding: 30px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+}
+
