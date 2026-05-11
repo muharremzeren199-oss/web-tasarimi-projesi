@@ -144,7 +144,6 @@
 /* ======================================================= */
 
 body:not(.login-page-body) {
-
     background-image: url('Resimler/arkaplan.jpg');
     background-size: cover; /* Resmi sündürmeden ekrana tam sığdırır */
     background-position: center;
@@ -154,10 +153,10 @@ body:not(.login-page-body) {
 /* Yazıların okunması için tüm içerik kutularına şık bir kağıt/kart görünümü veriyorum */
 body:not(.login-page-body) .container {
     background-color: rgba(255, 255, 255, 0.95); /* Yarı saydam beyaz arka plan */
+    max-width: 95% !important;
     border-radius: 15px; /* Köşeleri yumuşatır */
     padding: 30px;
     margin-top: 40px !important;
     margin-bottom: 40px !important;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Hafif gölge efekti */
 }
-
