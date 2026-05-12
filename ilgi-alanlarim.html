@@ -115,12 +115,12 @@
 
     <!-- API ENTEGRASYONU (JavaScript) -->
    <script>
-        // Sadece diziler ve belgeseller listemiz
+        // Sadece diziler listemiz
         const favoriDiziler = ['Gassal', 'La Casa de Papel', 'Prison Break', 'Peaky Blinders', 'Oppenheimer'];
         const sonucKutusu = document.getElementById('api-sonuclari');
         sonucKutusu.innerHTML = ''; // Ekranda dönen Yükleniyor... yazısını temizle
 
-        // Listemizdeki her bir dizi için API'ye aynı anda, ayrı ayrı istek atıyoruz
+        // Listedeki her bir dizi için API'ye aynı anda, ayrı ayrı istek atıyor
         Promise.all(favoriDiziler.map(diziAdi =>
             fetch(`https://api.tvmaze.com/search/shows?q=${diziAdi}`)
                 .then(cevap => cevap.json())
@@ -133,12 +133,12 @@
                 })
         ))
             .then(sonuclar => {
-                // Bulunamayanları (null olanları) listeden çıkar
+                // nulllari temizle
                 const gecerliSonuclar = sonuclar.filter(dizi => dizi !== null);
 
-                // Bulunan her bir diziyi ekrana kart olarak bas
+                // Her bir dizi için kart oluştur ve ekrana bas
                 gecerliSonuclar.forEach(dizi => {
-                    // Eğer dizinin kapağı yoksa yedek resim göster
+                    // Resim yoksa placeholder koy
                     const resimLinki = dizi.image ? dizi.image.medium : 'https://via.placeholder.com/210x295?text=Afiş+Yok';
 
                     const kart = `

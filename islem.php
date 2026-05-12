@@ -61,10 +61,10 @@
                         <h5 class="card-title mb-4 text-secondary">Sunucuya Ulaşan Gelen Veriler:</h5>
 
                         <?php
-                        // Formdan gelen verilerin POST metoduyla gelip gelmediğini kontrol ediyoruz
+                        // Formdan gelen verilerin POST metoduyla kontrol eder.
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                            // Güvenlik için htmlspecialchars kullanıyoruz ve isset ile verilerin varlığını kontrol ediyoruz
+                            // degiskenleri al (guvenlikli)
                             $ad = isset($_POST['ad']) ? htmlspecialchars($_POST['ad']) : 'Belirtilmedi';
                             $tel = isset($_POST['tel']) ? htmlspecialchars($_POST['tel']) : 'Belirtilmedi';
                             $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : 'Belirtilmedi';
@@ -72,10 +72,10 @@
                             $cinsiyet = isset($_POST['cinsiyet']) ? htmlspecialchars($_POST['cinsiyet']) : 'Belirtilmedi';
                             $mesaj = isset($_POST['mesaj']) ? htmlspecialchars($_POST['mesaj']) : 'Belirtilmedi';
 
-                            // Checkbox seçiliyse "on" değeri gelir, onu "Evet" olarak değiştiriyoruz
+                            // Checkbox seçiliyse "on" değeri gelir, onu "Evet" olarak değiştirir.
                             $onay = isset($_POST['onay']) ? 'Evet, Onaylandı' : 'Hayır, Onaylanmadı';
 
-                            // Gelen verileri Bootstrap tablosu içine yazdırıyoruz
+                            // Gelen verileri Bootstrap tablosu içine yazdırır.
                             echo "<table class='table table-bordered table-striped'>";
                             echo "<tr><th style='width: 30%;'>Ad Soyad</th><td>$ad</td></tr>";
                             echo "<tr><th>Telefon</th><td>$tel</td></tr>";

@@ -5,13 +5,13 @@ $dogru_sifre = $ogrenci_no;
 
 $hata_mesaji = "";
 $giris_basarili = false;
-   // Form submit edildiyse (POST metoduyla geldiyse) çalışacak kısım
+   // POST metoduyla geldiyse çalışacak kısım
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $sifre = isset($_POST['sifre']) ? trim($_POST['sifre']) : '';
-    // Gelen verileri bizim belirlediğimiz doğru bilgilerle karşılaştırıyoruz
+    // girilen bilgiler doğru mu kontrolü yapılıyor
     if ($email === $dogru_email && $sifre === $dogru_sifre) {
-        $giris_basarili = true;  //Şifre doğruysa başarı sayfasını tetikle
+        $giris_basarili = true;  // Giriş başarılı yap.
     } else {
         $hata_mesaji = "Hatalı e-posta veya şifre girdiniz. Lütfen tekrar deneyin.";
     }
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Form doğrulama için JavaScript -->
     <script>
         document.getElementById('GirisForm').addEventListener('submit', function(event) {
-            // Kutucuklardaki yazıları alıyoruz
+            // input degerlerini al ve trim ile boşlukları temizle
             const email = document.getElementById('email').value.trim();
             const sifre = document.getElementById('sifre').value.trim();
              // E-posta formatını kontrol eden kural
@@ -131,14 +131,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 alert('Hata: Lütfen e-posta ve şifre alanlarını boş bırakmayınız!');
                 return;
             }
-            // 2. Mail Formatı Kontrolü 
+            // 2. Mail Formatı Kontrolü
             if (!emailRegex.test(email)) {
                 event.preventDefault();
                 alert('Hata: Lütfen geçerli bir e-posta formatı giriniz (örn: isim@domain.com)!');
                 return;
                 }
         });
-    // Eğer JS'de hata yoksa form PHP'ye (sunucuya) doğru yola çıkar.
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
